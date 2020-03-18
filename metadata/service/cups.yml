@@ -4,3 +4,4 @@ parameters:
   cups:
     service:
       enabled: true
+      running: true
