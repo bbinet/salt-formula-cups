@@ -1,0 +1,6 @@
+applications:
+- cups
+parameters:
+  cups:
+    service:
+      enabled: true
