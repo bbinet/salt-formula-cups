@@ -54,7 +54,7 @@ def printers():
                 printers[name] = current
 
             current = {}
-            matches = re.match(r"printer\s(\w+)\s.*(enabled|disabled)\ssince\s([^-]*)", line)
+            matches = re.match(r"printer\s([^\s]+)\s.*(enabled|disabled)\ssince\s([^-]*)", line)
             name = matches.group(1)
             current['status'] = matches.group(2)
             current['status_age'] = matches.group(3)
