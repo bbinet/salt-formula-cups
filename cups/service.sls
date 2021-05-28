@@ -10,11 +10,17 @@ cups:
   service.running:
   - require:
     - pkg: cups_pkgs
+{%- if grains.get('noservices') %}
+  - onlyif: /bin/false
+{%- endif %}
 
 cups-browsed:
   service.running:
   - require:
     - pkg: cups_pkgs
+{%- if grains.get('noservices') %}
+  - onlyif: /bin/false
+{%- endif %}
 
 {%- for p, pcfg in service.printers.items() %}
 
